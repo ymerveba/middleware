@@ -1,0 +1,65 @@
+package com.webApp.Domain;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+@SuppressWarnings("restriction")
+@XmlRootElement
+public class DiscountRequestObject {
+   //private LoginForm userDetails;
+	
+  private String WebAppId;
+
+  private String Password;
+	
+  private String userID;
+	
+  private int numberOfTransactions;
+	private int TotalValue;
+	@XmlElement(name="WebAppId")
+public String getWebAppId() {
+	return WebAppId;
+}
+  
+public void setWebAppId(String webAppId) {
+	WebAppId = webAppId;
+}
+@XmlElement(name="Password")
+public String getPassword() {
+	return Password;
+}
+public void setPassword(String password) {
+	Password = password;
+}
+@XmlElement(name="userID")
+public String getUserID() {
+	return userID;
+}
+public void setUserID(String userID) {
+	this.userID = userID;
+}
+@XmlElement(name="numberOfTransactions")
+public int getNumberOfTransactions() {
+	return numberOfTransactions;
+}
+public void setNumberOfTransactions(int numberOfTransactions) {
+	this.numberOfTransactions = numberOfTransactions;
+}
+@XmlElement(name="TotalValue")
+public int getTotalValue() {
+	return TotalValue;
+}
+public void setTotalValue(int totalValue) {
+	TotalValue = totalValue;
+}
+  
+/*   @XmlElement
+public LoginForm getUserDetails() {
+	return userDetails;
+}
+public void setUserDetails(LoginForm userDetails) {
+	this.userDetails = userDetails;
+}*/
+
+
+   
+}
